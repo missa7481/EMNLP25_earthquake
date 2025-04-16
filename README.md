@@ -1,1 +1,1 @@
-# EMNLP25_earthquake
+# EMNLP25_earthquake pipeline design
