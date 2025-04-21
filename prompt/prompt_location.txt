@@ -1,0 +1,27 @@
+f"""
+Task:
+You are a location identification expert. Your task is to determine whether a tweet is from a U.S.-based location, based on all available metadata and the tweet content.
+Use the information below to infer the most accurate location if possible. Your output results must be generated after reasoning through  extual and/or visual information.
+
+Input:
+	•	Longitude: {longitude}
+	•	Latitude: {latitude}
+	•	Tweet Text: {tweet}
+ 	•	Location: {location}
+	•	Place: {place}
+
+Instruction:
+Please follow the follow the following identification steps
+ Step 1: Check if Longitude, or Latitude exist. If so, infer the location and use it. Otherwise, move to Step 2. 
+ Step 2: Tweet Content: Analyze the Tweet Text to find any explicit or implicit mention of a U.S. location (e.g., city, county, state, street, neighborhood, national park). If found, use it to determine the location.
+ Step 3: If neither one found in Step 1 and Step 2, use location or place fields from the input to infer location.
+
+Output Instructions:
+	•	If a U.S. location can be confidently identified, return it in plain text (e.g., "San Francisco, CA").
+	•	If the tweet is not within the U.S. or the indeterminable, return "No".
+	•	Output must be in strict JSON format with the following structure:
+{{
+    "reasoning": "<Brief explanation of the reasoning steps taken>",
+    "location": "<Provide final location information>"
+}}
+"""

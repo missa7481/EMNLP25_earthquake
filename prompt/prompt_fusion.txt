@@ -1,0 +1,55 @@
+f"""
+Task: 
+You are the earthquake damage accessment experts. Your task is to identify the damage level align with Modified Mercalli Intensity(MMI) levels from a given tweet. 
+Your output must be generated based on evidence from the given tweet content.
+
+Input: 
+Text Description:
+{tweet}
+
+Image Description:
+Please analyze the image to assess the severity of the earthquake's damage based on MMI Scale. 
+
+Instructions:
+
+1. Human Impact Evaluation:
+   Look for language or visual evidence suggesting that people experienced or emotionally reacted to the earthquake. Indicators may include expressions or signs of: fear(e.g., "people were terrified", "panic in the streets"), shock or confusion(e.g., "people didn't know what to do"), physical presence or impact (e.g., "people ran outside", "rescue teams helping trapped residents"), sensation reporting (e.g., "I felt the floor shake", "it was the strongest I've ever felt"), etc. Then return:
+    •  1: if there is any mention or evidence of human emotional or physical experience of the earthquake. 
+    •  0: if there is no indication that humans were present or affected emotionally/physically.
+
+2. Damage Type Classification:
+   Classify the damage type as either:
+    •  Interior: Damage that is clearly observed inside a building (e,g, cracked or collapsed interior walls, broken windows or glass, displaced or fallen indoor furniture, ceiling or floor cracks, shaking fixtures (e.g., light fixtures, shelves)).
+    •  Exterior: Damage that is clearly observed on the outside of buildings or in the surrounding environment (e.g., Collapsed buildings, shifts in building foundation or roof collapse, partial structural failure, cracked roads/sidewalks/bridges, fallen trees or utility poles, visible debris or rubble outside).
+    •  Both: Evidence of damage is present both inside and outside of structures. The content includes clear indicators of both categories listed above.
+    •  None: The input does not provide enough information to determine whether the damage is interior, exterior, or both.
+
+3. Damage Level Classification (MMI Scale):
+   After identifying the damage type (Interior, Exterior, Both, or None) and human impact ("1" or "o"), classify the earthquake damage level align with MMI scale.
+   If human impact is 1 from the previous step (human can feel the earthquake), consider both human impact and damage level classification.
+   If human impact is 0 from the previous step (human can't feel the earthquake), proceed based solely with damage level classification.
+ 
+   Damage Level Categories (MMI Scale):
+   1 - Not felt: No noticeable damage.
+   2 - Weak: Felt by only a few people at rest; no damage to buildings.
+   3 - Light: Felt indoors, especially on upper floors; no significant structural damage.
+   4 - Moderate: Felt by most people; some damage to buildings, such as minor cracks.
+   5 - Strong: Felt by everyone; damage to buildings, minor cracks, but no collapse.
+   6 - Very Strong: Damage to buildings, visible structural deformation.
+   7 - Severe: Significant damage, some collapses or structural failures.
+   8 - Very Severe: Many buildings collapse or are severely damaged.
+   9 - Violent: Total destruction in some areas, severe damage.
+   10 - Extreme: Complete destruction of all structures in the affected area.
+
+
+Output:
+Output must be in strict JSON format with the following structure:
+{{
+    "human_impact": <1 or 0>,
+    "damage_type": "<Interior | Exterior | Both | None>",
+    "damage_level": <1–10>
+    "reasoning": "<Explain how you get the human_impact, damage_type, damage_level based on the input information>",
+    "confidence": "<Return how confident (scale 0-1) you are in the final MMI damage level>"
+}}
+"""
+    

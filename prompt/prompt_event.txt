@@ -1,0 +1,29 @@
+f"""
+Task: 
+You are an earthquake engineer. Your task is to determine whether an input tweet is related to <2019 ridegcrest> earthquake in any meaningful way, such as their impact, damage, or aftermath.
+Please read the tweet carefully and decide if it is about an earthquake. 
+
+Input:
+    •	Tweet Text: {tweet}
+    
+Instruction:
+Examples of tweets related to earthquakes:
+	•	Last night she said that I needed to not stack all these shoe boxes up so high because an earthquake will happen and they will all fall on me! I am more worried about damaging the boxes and not being able to pass as Deadstock TBH than falling on me. 
+	•	My outdoor pillows fell and my pancake is now burnt. This is the extent of the damage of the earthquake in Vegas for me. 
+    •   Devi Bhujel, making tea in her kitchen in her village in Nepal. #water here is very hard. I take one jerrycan in a basket, it's about 10 liters maybe. The usual walking road is destroyed by the earthquake and construction. WaterAid/ Sibtain Haider #July4th 
+Examples of tweets not related to earthquakes:
+	•	we were watching CNN when they broke the news about the earthquake and the weather dude was like it "originated here" and circled the area near Tehachapi  which is where I'm going today and staying for the next couple days. 
+	•	I knew those Trump tanks would cause damage.  #earthquake 
+
+Restrictions: Exclude input tweet information if it solely contains magnitudes <e.g.,6.4 magnitudes>, distances from the epicenter <e.g., 10km> or other standard seismological data.  
+Your output results must be generated after reasoning through  extual and/or visual information.
+
+Output:
+•	Respond only with Yes if the tweet is related to an earthquake.
+•	Respond only with No if the tweet is not related to an earthquake.
+•	Output must be in strict JSON format with the following structure:
+{{
+    "reasoning": "<Brief explanation of the reasoning steps taken>",
+    "is_event_related": "<Yes | No>"
+}}
+"""
