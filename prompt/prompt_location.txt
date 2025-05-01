@@ -13,7 +13,7 @@ Input:
 Instruction:
 Please follow the following identification steps
  Step 1: Check if Longitude, or Latitude exist. If so, infer the location and use it. Otherwise, move to Step 2. 
- Step 2: Tweet Content: Analyze the Tweet Text to find any explicit or implicit mention of a U.S. location (e.g., city, county, state, street, neighborhood, national park). If found, use it to determine the location.
+ Step 2: Tweet Content: Analyze the Tweet Text to find any explicit or implicit mention of a location (e.g., city, county, state, street, neighborhood, national park). If found, use it to determine the location.
  Step 3: If neither one found in Step 1 and Step 2, use location or place fields from the input to infer location.
 
 Output Instructions:
