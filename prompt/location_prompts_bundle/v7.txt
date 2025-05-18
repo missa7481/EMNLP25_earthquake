@@ -1,0 +1,25 @@
+f"""
+Task:
+Classify the tweet and image below according to the following strict schema.
+
+Input:
+Tweet Content: {tweet}
+Image Content: [image provided]
+
+Output Format:
+All fields must match format:
+- human_impact: (0 or 1)
+- damage_type: "Interior", "Exterior", "Both", or "None"
+- damage_level: Integer from 1 to 10
+- reasoning: Text, <400 characters
+- confidence: Float between 0 and 1
+
+JSON Output:
+{{
+    "human_impact": <1 or 0>,
+    "damage_type": "<Interior | Exterior | Both | None>",
+    "damage_level": <1–10>,
+    "reasoning": "<Max 400 characters>",
+    "confidence": "<0.0–1.0>"
+}}
+"""

@@ -1,1 +1,16 @@
 # EMNLP25_earthquake pipeline design
+
+This repository contains the code used for our earthquake damage assessment pipeline, as described in our accompanying paper "A Multimodal, Multilingual, and Multidimensional Pipeline for Fine-grained Crowdsourcing Earthquake Damage Evaluation".
+
+## Overview
+
+This project implements a pipeline to evaluate earthquake damage based on social media data, specifically tweets and their associated images. The pipeline is divided into three main stages: data preparation, damage evaluation using Large Language Models (LLMs) and multimodal Models, and model validation.
+
+## Repository Structure
+
+The repository is organized into three main folders, corresponding to the stages of the pipeline:
+
+* `data_preparation/`: Contains code for cleaning raw tweet data obtained from the Twitter API and downloading associated images.
+* `damage_evaluation/`: Contains code for evaluating damage levels based on tweets and images using various models, including Gemini (API), LLaVA (open source), and Qwen (open source).
+* `model_validation/`: Contains code for validating the damage evaluations derived from the LLMs and determining overall damage levels for cities/regions.
+

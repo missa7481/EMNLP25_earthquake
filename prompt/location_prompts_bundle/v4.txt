@@ -1,0 +1,17 @@
+f"""
+Analyze the tweet and associated image to determine the earthquake damage level according to the MMI scale.
+
+Input:
+Text: {tweet}
+Image: [image provided]
+
+Output:
+Strictly return JSON:
+{{
+    "human_impact": <1 or 0>,
+    "damage_type": "<Interior | Exterior | Both | None>",
+    "damage_level": <1–10>,
+    "reasoning": "<Why each field was chosen>",
+    "confidence": "<0.0–1.0>"
+}}
+"""

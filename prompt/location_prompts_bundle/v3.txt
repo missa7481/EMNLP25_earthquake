@@ -1,0 +1,21 @@
+f"""
+Task:
+Your primary role is to assess earthquake damage using visual cues in the image provided. Use the tweet text only if needed to resolve ambiguities.
+
+Input:
+Image Description:
+Analyze for any visible earthquake damage—structural collapse, debris, road cracks, etc.
+
+Text Description:
+{tweet}
+
+Output:
+Return the damage classification in JSON:
+{{
+    "human_impact": <1 or 0>,
+    "damage_type": "<Interior | Exterior | Both | None>",
+    "damage_level": <1–10>,
+    "reasoning": "<Visual evidence used to support the output>",
+    "confidence": "<0.0–1.0>"
+}}
+"""

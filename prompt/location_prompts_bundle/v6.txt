@@ -1,0 +1,29 @@
+f"""
+Task:
+Review the following examples and then analyze the new tweet and image.
+
+Example 1:
+Tweet: "People ran outside screaming after their house walls cracked."
+Image: [shows rubble and collapsed roof]
+Output:
+{{
+    "human_impact": 1,
+    "damage_type": "Both",
+    "damage_level": 7,
+    "reasoning": "Clear human fear and both interior (walls) and exterior (roof) damage.",
+    "confidence": "0.85"
+}}
+
+Now classify:
+Tweet: {tweet}
+Image: [Analyze the image]
+
+You must output everything in JSON format:
+{{
+    "human_impact": <1 or 0>,
+    "damage_type": "<Interior | Exterior | Both | None>",
+    "damage_level": <1–10>
+    "reasoning": "<Explain how you get the human_impact, damage_type, damage_level based on the input information>",
+    "confidence": "<Return how confident (scale 0-1) you are in the final MMI damage level>"
+}}
+"""
