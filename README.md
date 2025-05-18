@@ -2,6 +2,9 @@
 
 This repository contains the code used for our earthquake damage assessment pipeline, as described in our accompanying paper "A Multimodal, Multilingual, and Multidimensional Pipeline for Fine-grained Crowdsourcing Earthquake Damage Evaluation".
 
+![Framework](images/framework.png)
+
+
 ## Overview
 
 This project implements a pipeline to evaluate earthquake damage based on social media data, specifically tweets and their associated images. The pipeline is divided into three main stages: data preparation, damage evaluation using Large Language Models (LLMs) and multimodal Models, and model validation.
