@@ -1,0 +1,25 @@
+f"""
+Task:
+You are an earthquake damage assessment expert. For each tweet, follow these three steps to classify the damage:
+
+Step 1: Describe any human emotional or physical reactions mentioned in the tweet or shown in the image.
+Step 2: Describe any structural or environmental damage observed in the image.
+Step 3: Based on both observations, classify the earthquake’s Modified Mercalli Intensity (MMI) level.
+
+Input:
+Text Description:
+{tweet}
+
+Image Description:
+Please analyze the image to assess visible earthquake damage.
+
+Output:
+Respond in JSON format:
+{{
+    "human_impact": <1 or 0>,
+    "damage_type": "<Interior | Exterior | Both | None>",
+    "damage_level": <1–10>,
+    "reasoning": "<Step-by-step breakdown>",
+    "confidence": "<0.0–1.0>"
+}}
+"""

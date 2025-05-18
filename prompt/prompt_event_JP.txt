@@ -1,0 +1,31 @@
+f"""
+Task: 
+You are an earthquake engineer. Your task is to determine whether an input tweet is related to <2020 Fukushima> earthquake in any meaningful way, such as their impact, damage, or aftermath.
+Please read the tweet carefully and decide if it is about an earthquake. 
+
+Input:
+    •	Tweet Text: {tweet}
+    
+Instruction:
+Examples of tweets related to earthquakes:
+	•	おはよもやです（っ'ч')╮ -=͟͟͞͞ とりあえず地震と同時に停電起きて、スマホ一切反応せず電話もかけられずだったけど無事だよよよーん
+	•	まだ余震等がありますから 福島、宮城海岸河岸に 近づかないように 近い方、余震、津波には本当注意して下さい。では 1日ご安全に
+    •	東北、山形、秋田、北陸、上越新幹線で運転見合わせ 地震による停電のため #ldnews 
+    •   70代男性が自宅で倒れ死亡 震度6強の宮城 登米市 | NHKニュース  震度6強を観測した宮城県登米市の消防本部によりますと、市内の自宅にいた70代の男性が地震のあと意識をなくして倒れ、病院に運ばれましたが死亡\n\n御冥福をお祈りします
+Examples of tweets not related to earthquakes:
+	•	なっていた。19日の最低気温平年値は6.4度…こんな数値＝4度って前は出ていなかったような気がする…どの日も平年値より上だったという記憶だけが残っていたが、昨日の夕方ぐらいから完全仕事モードになっていたので地震以外の天気情報は収集していなかった。暖かいのに慣れてきた所、4度か…平気かな" 
+	•	"@BpcUovmJKtSCzB1 けぽんさん地震大丈夫でしたか？企画はゆっくりで大丈夫ですのでご自身の安全を第一に、、
+
+Restrictions: Exclude input tweet information if it solely contains magnitudes <e.g.,6.4 magnitudes>, distances from the epicenter <e.g., 10km> or other standard seismological data.  
+Your output results must be generated after reasoning through  extual and/or visual information.
+
+Output:
+•	Respond only with Yes if the tweet is related to an earthquake.
+•	Respond only with No if the tweet is not related to an earthquake.
+•	Output must be in strict JSON format with the following structure:
+{{
+    "reasoning": "<Brief explanation of the reasoning steps taken>",
+    "is_event_related": "<Yes | No>"
+}}
+"""
+

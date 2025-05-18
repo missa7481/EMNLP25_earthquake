@@ -1,3 +1,4 @@
+
 f"""
 Task: 
 You are an earthquake engineer. Your task is to determine whether an input tweet is related to <2019 ridegcrest> earthquake in any meaningful way, such as their impact, damage, or aftermath.

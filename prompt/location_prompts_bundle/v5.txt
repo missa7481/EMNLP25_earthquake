@@ -1,0 +1,20 @@
+f"""
+Task:
+Please answer the following questions based on the tweet and image:
+
+1. Did people seem to experience or react to the earthquake?
+2. Where did the damage occur—inside, outside, both, or unclear?
+3. What is the MMI level based on the human and structural impact?
+
+Tweet: {tweet}
+Image: [Analyze the image]
+
+Output:
+{{
+    "human_impact": <1 or 0>,
+    "damage_type": "<Interior | Exterior | Both | None>",
+    "damage_level": <1–10>,
+    "reasoning": "<Answer the above questions with justification>",
+    "confidence": "<0.0–1.0>"
+}}
+"""
