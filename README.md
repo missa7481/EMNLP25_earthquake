@@ -40,11 +40,15 @@ The 3M pipeline operates in three stages:
 
 ---
 
+
+## 📊 Results
+
 Key findings from the 3M pipeline experiments:
 
-- **Near=moderate correlation** with DYFI ground-truth seismic data  
-- **Robust performance** in urban and multilingual contexts
-- **Effective reasoning** patterns and model interpretability analysis   
-- **Limitations** in high-intensity damage detection and low-signal/multilingual regions
+- **~Near-moderate correlation** with DYFI ground-truth seismic data  
+- **Robust performance** in urban and multilingual contexts  
+- **Effective reasoning** patterns and model interpretability analysis  
+- **Limitations** in high-intensity damage detection and low-signal/multilingual regions  
+
 
 
