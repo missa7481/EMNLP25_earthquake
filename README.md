@@ -24,18 +24,19 @@ The 3M pipeline operates in three stages:
 - `Gemini-2.5-Flash`
 
 ## 📁 Directory Structure
-<pre>
+'''
 ├── data_opreparation/ # Preprocessed tweet data
 ├── damage_evaluation/ # Prompt templates used for LLMs and model call scripts and configs
 ├── model_validation/ # Correlation and reasoning analysis
 ├── results/ # CSV files with sample damage evaluation results.
 └── README.md # Project documentation
   
-🚀note: All original user information has been removed from these files. The full dataset is available upon request.
 
-
+📝 *Note: All original user information has been removed from these files. The full dataset is available upon request.*
 
 ## 📊 Results
+
+
 
 Key findings from the 3M pipeline experiments:
 
