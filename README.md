@@ -1,20 +1,52 @@
-# A Multimodal, Multilingual, and Multidimensional Pipeline for Fine-grained Crowdsourcing Earthquake Damage Evaluation
+# 🌀 3M Pipeline for Disaster Damage Assessment
 
-This repository contains the code used for our earthquake damage assessment pipeline, as described in our accompanying paper "A Multimodal, Multilingual, and Multidimensional Pipeline for Fine-grained Crowdsourcing Earthquake Damage Evaluation".
+This repository implements the **3M (Multimodal, Multilingual, and Multidimensional)** pipeline for fine-grained disaster damage assessment using social media and multimodal large language models (MLLMs).
+
+## 🔍 Overview
+
+The 3M pipeline operates in three stages:
+
+1. **Data Preparation**: Filtering and geolocating disaster-related tweets.  
+2. **Damage Evaluation**: Using MLLMs to classify damage severity (MMI scale) from text and image inputs.  
+3. **Model Evaluation**: Correlating model predictions with DYFI ground-truth data and analyzing input modality, prompt sensitivity, and reasoning transparency.
 
 ![Framework](images/framework.png)
 
+## 🌍 Case Studies
 
-## Overview
+- **2019 Ridgecrest Earthquake** (USA)  
+- **2021 Fukushima Earthquake** (Japan)
 
-This project implements a pipeline to evaluate earthquake damage based on social media data, specifically tweets and their associated images. The pipeline is divided into three main stages: data preparation, damage evaluation using Large Language Models (LLMs) and multimodal Models, and model validation.
+## 🤖 Supported Models
 
-## Repository Structure
+- `LLaVA 3–8B`  
+- `Qwen 2.5-VL-7B`  
+- `Gemini-2.5-Flash`
 
-The repository is organized into three main folders, corresponding to the stages of the pipeline:
+## 📁 Directory Structure
 
-* `data_preparation/`: Contains code for cleaning raw tweet data obtained from the Twitter API and downloading associated images.
-* `damage_evaluation/`: Contains code for evaluating damage levels based on tweets and images using various models, including Gemini (API), LLaVA (open source), and Qwen (open source).
-* `model_validation/`: Contains code for validating the damage evaluations derived from the LLMs and determining overall damage levels for cities/regions.
+├── data_opreparation/ # Preprocessed tweet data
+├── damage_evaluation/ # Prompt templates used for LLMs and model call scripts and configs
+├── model_validation/ # Correlation and reasoning analysis
+├── results/ # CSV files with sample damage evaluation results.
+└── README.md # Project documentation
 
-* `results/`: Contains CSV files with sample damage evaluation results. To align with the research article, this includes results from Gemini for Ridgecrest and LLaVA for Fukushima. All original user information has been removed from these files. The full dataset is available upon request.
+🚀note: All original user information has been removed from these files. The full dataset is available upon request.
+
+## 🚀 Getting Started
+
+```bash
+git clone https://github.com/yourname/3m-disaster-pipeline.git
+cd 3m-disaster-pipeline
+pip install -r requirements.txt
+
+## 📊 Results
+
+Key findings from the 3M pipeline experiments:
+
+- **Near=moderate correlation** with DYFI ground-truth seismic data  
+- **Robust performance** in urban and multilingual contexts
+- **Effective reasoning** patterns and model interpretability analysis   
+- **Limitations** in high-intensity damage detection and low-signal/multilingual regions
+
+
