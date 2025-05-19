@@ -31,20 +31,21 @@ The 3M pipeline operates in three stages:
 ├── model_validation/      # Correlation and reasoning analysis  
 ├── results/               # CSV files with sample damage evaluation results  
 └── README.md              # Project documentation  
+```
 
 
-📝 *Note: All original user information has been removed from these files. The full dataset is available upon request.*
+
+📌 *Note: All original user information has been removed from these files. The full dataset is available upon request.*
 
 ## 📊 Results
-
-
 
 Key findings from the 3M pipeline experiments:
 
 - **~Near-moderate correlation** with DYFI ground-truth seismic data  
 - **Robust performance** in urban and multilingual contexts  
 - **Effective reasoning** patterns and model interpretability analysis  
-- **Limitations** in high-intensity damage detection and low-signal/multilingual regions  
+- **Limitations** in high-intensity damage detection and low-signal/multilingual regions
+
 
 
 
