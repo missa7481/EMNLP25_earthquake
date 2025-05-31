@@ -27,10 +27,10 @@ The 3M pipeline operates in three stages:
 
 ```text
 ├── data_opreparation/     # Preprocessed tweet data  
-├── damage_evaluation/     # Prompt templates used for LLMs and model call scripts and configs
+├── damage_evaluation/     # Model call scripts and configs
 ├── prompt/                # Prompt templates used for LLMs  
 ├── model_validation/      # Correlation and reasoning analysis
-├── image/                 # framwrok and key result visulizations 
+├── image/                 # framework and key result visualizations 
 ├── results/               # CSV files with sample damage evaluation results  
 └── README.md              # Project documentation  
 ```
